@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d08bd7f811.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/css/simple-lightbox.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <title>Leon's Pressure cleaner</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_Fe1G7VQ0vtS2rYl2GpGjf");
+    })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('Leon_pressure', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <script>
+        function thank_you() {
+          alert("Thank you! we will contact you Soon! ");
+        }
+        </script>
+</head>
+<body id = 'home'>
+    <nav class= 'navbar'>
+        <div class= 'container'>
+            <h1 class= 'logo'> Leon's Pressure Cleaner </h1>
+            <ul class='nav'>
+                <li><a href='#home'> Home </a></li>
+                <li><a href='#contact'> Contact </a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!--Show case-->
+
+    <section class="section-a">
+        <div class="container">
+            <div>
+                <h1> Pressure Cleaning Service! </h1>
+                <p> Leon's Pressure Cleaners offer a unique service and helps remove years of dirt and grime on most surface. We specialize in roofs, driveways and sidewalks. We take a great sense of pride in our work and ensure that our customers are satisfied with.</p>
+                    <a href="#" class="btn">See More!</a>
+            </div>
+            <img src="dist/img/Header.jpg" alt="">
+        </div>
+    </section>
+
+
+    <!--Overlay-->
+
+    <section class="section-b">
+        <div class="overlay">
+            <div class="section-b-inner">
+                <h3>Leave Mold and Stain's To Us! </h3>
+                <h2> Contact Us for a free consultation! </h2>
+                <p> We'd love to get to know you! Please leave your name, email and what you would like for us to make brand new and we will reach out to you! Thank you </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Gallery-->
+    <section class="section-c">
+        <div class="gallery">
+            <a href="dist/img/Tile-1.jpg" class="big"
+            ><img src="dist/img/Tile-1.jpg" alt=""/></a>
+
+            <a href="dist/img/cars.jpeg" class="big"
+            ><img src="dist/img/cars.jpeg" alt=""/></a>
+
+            <a href="dist/img/tile-conc.jpg" class="big"
+            ><img src="dist/img/tile-conc.jpg" alt=""/></a>
+
+            <a href="dist/img/tile-equip.jpg" class="big"
+            ><img src="dist/img/tile-equip.jpg" alt=""/></a>
+
+            <a href="dist/img/tile-house.jpg" class="big"
+            ><img src="dist/img/tile-house.jpg" alt=""/></a>
+
+            <a href="dist/img/roof.png" class="big"
+            ><img src="dist/img/roof.png" alt=""/></a>
+
+        </div>
+
+    </section>
+
+    <!--Email section -->
+
+    <section class="section-d" id="contact">
+        <div class="email-container">
+
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <label>Name</label>
+            <input type="text" name="user_name">
+            <label>Email</label>
+            <input type="email" name="user_email">
+            <label>Message</label>
+            <textarea name="message" placeholder="How can we assit? "></textarea>
+            <input type="submit" value="Send" onclick="thank_you()" >
+        </form>
+
+        </div>
+
+    </section>
+
+    
+
+    <!--Footer-->
+
+    <footer class="section-footer">
+        <div class="container">
+            <div>
+            <h2> Follow us! </h2>
+            <a href="https://www.instagram.com/leonspressurecleaning/">
+            <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="dist/js/simple-lightbox.jquery.min.js"></script>
+    <script>
+        $(function() {
+        const $gallery = $('.gallery a').simpleLightbox();
+      });
+  </script>
+</body>
+</html>
